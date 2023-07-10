@@ -3,16 +3,22 @@
 function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
    // Tu código:
+   let primerElemento = array[0];
+   return primerElemento;
 }
 
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
+   let ultimoElemento = array[array.length -1];
+   return ultimoElemento
 }
 
 function obtenerLargoDelArray(array) {
    // Retornar la longitud del arreglo recibido por parámetro.
    // Tu código:
+   let largo = array[obtenerLargoDelArray.length];
+   return largo;
 }
 
 function incrementarPorUno(array) {
