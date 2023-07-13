@@ -143,31 +143,64 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
+   var numeroString=num.toString();
+   return numeroString.charAt(0)==='9';
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
-}
+   for (i=0; i<array.length; i++) {
+      if(array[i]!==array[0]) {
+         return false;
+      }
+   }
+   return true
+   }
 
 function mesesDelAño(array) {
    // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+   var nuevoArray=[];
+   var arrayComparar=['Enero', 'Marzo', 'Noviembre'];
+   for (i=0; i<array.length; i++) {
+      if (arrayComparar.includes(array[i])) {
+         nuevoArray.push(array[i]);
+      }
+   }
+   if (nuevoArray.length === arrayComparar.length) {
+      return nuevoArray;
+   } else {
+      return "No se encontraron los meses pedidos"
+   }
 }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   var multiplicados = [];
+   for (i=0; i<=10; i++) {
+   var multiplicacion = 6 * i;
+multiplicados.push(multiplicacion);
+}
+return multiplicados;
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+   var nuevoArray = [];
+   for (i=0; i<array.length; i++) {
+      if (array[i]>100) {
+         nuevoArray.push(array[i]);
+      }
+   }
+   return nuevoArray;
 }
 
 /* ----------------------------------------------------------------------------------
